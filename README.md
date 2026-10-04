@@ -16,7 +16,7 @@ I work in transportation research, so over time the examples will lean toward th
 | 6 | Discrete-time Markov chains | Planned |
 | 7 | Continuous-time Markov chains and M/M/s queues | Planned |
 
-[![Open notebook 1 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/notebooks/01_poisson_processes.ipynb)
+[![Open notebook 1 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/01_poisson_processes.ipynb)
 
 ## What is in notebook 1 so far
 
