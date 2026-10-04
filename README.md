@@ -8,7 +8,7 @@ I work in transportation research, so over time the examples will lean toward th
 
 | # | Topic | Status |
 |---|-------|--------|
-| 1 | [Poisson processes](notebooks/01_poisson_processes.ipynb) | In progress |
+| 1 | [Poisson processes](01_poisson_processes.ipynb) | In progress |
 | 2 | Interarrival times, splitting, and superposition | Planned |
 | 3 | Order statistics property and compound Poisson processes | Planned |
 | 4 | Non-homogeneous Poisson processes | Planned |
