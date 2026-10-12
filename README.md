@@ -9,14 +9,16 @@ I work in transportation research, so over time the examples will lean toward th
 | # | Topic | Status |
 |---|-------|--------|
 | 1 | [Poisson processes](01_poisson_processes.ipynb) | In progress |
-| 2 | Interarrival times, splitting, and superposition | Planned |
-| 3 | Order statistics property and compound Poisson processes | Planned |
-| 4 | Non-homogeneous Poisson processes | Planned |
-| 5 | Renewal theory and the inspection paradox | Planned |
-| 6 | Discrete-time Markov chains | Planned |
-| 7 | Continuous-time Markov chains and M/M/s queues | Planned |
+| 2 | [Train dispatch, waiting cost and the best departure interval](02_train_dispatch.ipynb) | In progress |
+| 3 | Interarrival times, splitting, and superposition | Planned |
+| 4 | Order statistics property and compound Poisson processes | Planned |
+| 5 | Non-homogeneous Poisson processes | Planned |
+| 6 | Renewal theory and the inspection paradox | Planned |
+| 7 | Discrete-time Markov chains | Planned |
+| 8 | Continuous-time Markov chains and M/M/s queues | Planned |
 
 [![Open notebook 1 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/01_poisson_processes.ipynb)
+[![Open notebook 2 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/02_train_dispatch.ipynb)
 
 ## What is in notebook 1 so far
 
@@ -27,6 +29,15 @@ I build a Poisson process from iid exponential gaps between arrivals, then test 
 - Counts in windows that do not overlap are independent, checked with a correlation and with a direct comparison of joint and product probabilities.
 
 Each check states a prediction first, shows the simulated result next to the theory, and notes how much of any difference is explained by sampling error.
+
+## What is in notebook 2 so far
+
+A train leaves a station every t minutes, and passengers arrive as a Poisson process. Leaving often costs money in departures, and leaving rarely makes passengers wait. The notebook finds the best interval.
+
+- Simulation confirms that the expected total waiting time in one cycle is λt²/2, with the match checked against standard errors.
+- A cost per minute combines a fixed departure cost and a waiting cost per passenger-minute.
+- A simulation over many intervals shows the cost per minute falls, bottoms out, and then rises, so there is a best interval.
+- The simulated best interval is checked against the exact answer from calculus.
 
 ## How I work through each topic
 
