@@ -10,15 +10,16 @@ I work in transportation research, so over time the examples will lean toward th
 |---|-------|--------|
 | 1 | [Poisson processes](01_poisson_processes.ipynb) | In progress |
 | 2 | [Train dispatch, waiting cost and the best departure interval](02_train_dispatch.ipynb) | In progress |
-| 3 | Interarrival times, splitting, and superposition | Planned |
-| 4 | Order statistics property and compound Poisson processes | Planned |
-| 5 | Non-homogeneous Poisson processes | Planned |
-| 6 | Renewal theory and the inspection paradox | Planned |
+| 3 | [Renewal processes, waiting at a bus stop](03_renewal_bus_stop.ipynb) | In progress |
+| 4 | Interarrival times, splitting, and superposition | Planned |
+| 5 | Order statistics property and compound Poisson processes | Planned |
+| 6 | Non-homogeneous Poisson processes | Planned |
 | 7 | Discrete-time Markov chains | Planned |
 | 8 | Continuous-time Markov chains and M/M/s queues | Planned |
 
 [![Open notebook 1 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/01_poisson_processes.ipynb)
 [![Open notebook 2 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/02_train_dispatch.ipynb)
+[![Open notebook 3 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NastaranTork/stochastic-processes-lab/blob/main/03_renewal_bus_stop.ipynb)
 
 ## What is in notebook 1 so far
 
@@ -38,6 +39,18 @@ A train leaves a station every t minutes, and passengers arrive as a Poisson pro
 - A cost per minute combines a fixed departure cost and a waiting cost per passenger-minute.
 - A simulation over many intervals shows the cost per minute falls, bottoms out, and then rises, so there is a best interval.
 - The simulated best interval is checked against the exact answer from calculus.
+
+## What is in notebook 3 so far
+
+Buses arrive at a stop with iid headways of mean 10 minutes, so the arrivals form a renewal process. I compare three headway distributions with the same mean, Deterministic 10, Exponential with mean 10, and Uniform(5, 15), and check the main renewal results against simulation.
+
+- The long-run bus rate matches $1/\mu$ for every distribution (Strong Law for renewal processes).
+- A random passenger's mean wait matches $E[X^2]/(2\mu)$, which is 5.0, 10.0 and 5.4 minutes for the three routes.
+- The inspection paradox shows up, since the headway a passenger lands in has mean $E[X^2]/\mu$, which is 10, 20 and 10.8 minutes.
+- The simulated wait distribution matches the limiting distribution $\frac{1}{\mu}\int_0^x \bar F(y)\,dy$, and the tail shows that only the exponential route leaves riders waiting more than 15 minutes.
+- The renewal reward theorem is checked with a crowding penalty that grows with headway length, where the long-run reward rate matches $E[R]/\mu$.
+
+The same average headway gives very different rider experiences, because waiting depends on $E[X^2]$ and not only on $\mu$.
 
 ## How I work through each topic
 
